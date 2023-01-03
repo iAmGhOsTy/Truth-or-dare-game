@@ -1,27 +1,8 @@
 #importing modules and data
 from tkinter import *
-# from truths import truth
-# from dares import dare
+from truths import truth
+from dares import dare
 import random
-
-# custom functions to read data
-
-x = open("truths.txt","r",encoding="utf8").read().splitlines()
-y = open("dares.txt","r").read().splitlines()
-
-def getTruth():
-    return random.choice(x)
-
-def getDare():
-    return random.choice(y)
-
-def changeTruth():
-    lable1.config(text=f"{getTruth()}")
-    lable1.grid(row=1,column=1,columnspan=3)
-
-def changeDare():
-    lable1.config(text=f"{getDare()}")
-    lable1.grid(row=1,column=1,columnspan=3)
 
 #creating the gui   
 
@@ -32,6 +13,20 @@ root = Tk()
 root.configure(background = "darkBlue")
 root.title("Truth or Dare")
 
+#self defined functions
+def getTruth():
+    return random.choice(truth)
+
+def getDare():
+    return random.choice(dare)
+
+def changeTruth():
+    lable1.config(text=f"{getTruth()}")
+    lable1.grid(row=1,column=1,columnspan=3)
+
+def changeDare():
+    lable1.config(text=f"{getDare()}")
+    lable1.grid(row=1,column=1,columnspan=3)
 
 #creating frames
 #frame = Frame(root,height=100,width=400,background="darkBlue").pack()
