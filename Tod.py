@@ -1,7 +1,5 @@
 #importing modules and data
 from tkinter import *
-# from truths import truth
-# from dares import dare
 import random
 
 #creating the gui   
