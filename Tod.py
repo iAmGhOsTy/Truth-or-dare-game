@@ -1,7 +1,7 @@
 #importing modules and data
 from tkinter import *
-from truths import truth
-from dares import dare
+# from truths import truth
+# from dares import dare
 import random
 
 #creating the gui   
@@ -14,11 +14,15 @@ root.configure(background = "darkBlue")
 root.title("Truth or Dare")
 
 #self defined functions
+
+x = open("truths.txt","r",encoding="utf-8").read().splitlines()
+y = open("dares.txt","r").read().splitlines()
+
 def getTruth():
-    return random.choice(truth)
+    return random.choice(x)
 
 def getDare():
-    return random.choice(dare)
+    return random.choice(y)
 
 def changeTruth():
     lable1.config(text=f"{getTruth()}")
