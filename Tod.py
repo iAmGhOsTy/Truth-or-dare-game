@@ -30,8 +30,6 @@ def changeDare():
     lable1.config(text=f"{getDare()}")
     lable1.grid(row=1,column=1,columnspan=3)
 
-#creating frames
-#frame = Frame(root,height=100,width=400,background="darkBlue").pack()
 
 #creating Lables
 
@@ -46,7 +44,6 @@ lable1.grid(row=1,column=1,columnspan=3,padx=10,pady=10)
 truthButton = Button(root, text = "Truth", command = changeTruth,width=10,font="Fixedsys").grid(column=1,row=3,padx=10,pady=10)
 dareButton = Button(root, text = "Dare", command = changeDare,width=10,font="Fixedsys").grid(column=2,row=3,padx=10,pady=10)
 quitButton = Button(root, text = "Quit", command = root.destroy,width=10,font="Fixedsys").grid(column=3,row=3,padx=10,pady=10)
-
 
 
 #main loop
